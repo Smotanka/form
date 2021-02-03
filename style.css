@@ -1,0 +1,122 @@
+*{font-family: "Times New Roman"}
+
+body{
+    background: lightsteelblue;
+
+}
+#headline_top{
+    color: black;
+    font-size: xx-large;
+    margin-bottom: 15px;
+
+}
+
+#icon_top{
+    color: #0A90A0;
+    text-shadow: whitesmoke;
+    font-size: xx-large;
+
+
+}
+
+.header{
+    flex: auto;
+    background: whitesmoke;
+    padding-bottom: 10px;
+}
+
+.main_header{
+    background: #0A90A0;
+    color: whitesmoke;
+
+    font-size: xx-large;
+
+}
+
+.main_body{
+    margin: auto;
+    background: whitesmoke;
+
+}
+#but{
+    background: #0A90F5;
+    color: whitesmoke;
+    font-size: large;
+
+}
+.second_row{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.date_selector{
+    padding: 0;
+}
+h2{
+    padding-left:15px;
+    padding-bottom:0;
+    font-family: "Times New Roman";
+}
+h1{
+    font-family: "Times New Roman";
+}
+.age_card{
+    background: #E01F23;
+    color: whitesmoke;
+    flex: auto;
+    width: 100%;
+}
+.third_row{
+    margin: auto;
+}
+.btn-primary {
+    background: #0A90F5;
+
+}
+
+#Other{
+    display:none;
+}
+.line{
+    border-bottom: grey solid 1px;
+    margin: 15px;
+
+}
+.name{
+    padding-top: 15px;
+}
+#label-select-drink{
+  padding-left: 2px;
+}
+#choice-alcoholic,#choice-non-alcoholic,#choice-abstinent,#choice-driver,#choice-beer,#choice-shots {
+    display: none;
+}
+.form-check-label{
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.footer{
+    margin-bottom: 50px;
+}
+#other-check{
+    display: none;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+#btn-area{
+    padding-bottom: 20px;
+    padding-left: 15px;
+
+}
+#validationAge{
+    padding: 15px;
+    margin: 0;
+}
+#error-message {
+
+    padding-left: 30px;
+}
+#required-msg{
+    padding-left: 15px;
+    padding-top: 30px;
+}
+

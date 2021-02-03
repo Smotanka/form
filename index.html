@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulár</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script  src="script.js" ></script>
+
+</head>
+<body>
+<header>
+        <nav class="header" >
+            <div class="w3-container" >
+                <a class="navbar-brand" id="headline_top" href="#">
+                    <i class=" material-icons" id="icon_top">reorder</i>
+                    Form
+                </a>
+            </div>
+        </nav>
+</header>
+<section class="w3-container ">
+    <div class="w3-row">
+        <div class="w3-card-4 col-12 mt-4 main_header">
+            <header class="w3-container  w3-center form_header">
+                <h1>Can You be my friend ?</h1>
+            </header>
+        </div>
+    </div>
+    <div class="w3-row">
+        <div class="w3-card-4 col-9 mt-4 main_body">
+            <p id="required-msg"> * required fields</p>
+            <form action="http://iolab.sk/form2mail/form2mail.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="apikey" value="a0e875999641dbb0426678c76f192320">
+                <input type="hidden" name="from" value="xsmetanka@stuba.sk">
+                <input type="hidden" name="sender" value="Martin Smetanka">
+                <input type="hidden" name="to" value="feistu04@gmail.com">
+                <input type="hidden" name="subject" value="Form">
+                <input type="hidden" name="redirectOk" value="http://147.175.121.202/~xsmetanka/public_html/97932_MS_Z3/redirectOK.html">
+                <input type="hidden" name="redirectFalse" value="http://147.175.121.202/~xsmetanka/public_html/97932_MS_Z3/redirectFalse.html">
+
+
+                <h2 class="name">Name *</h2>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" name="first-name" placeholder="First name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please insert name!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" name="last-name" placeholder="Last name"  required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" pattern="([a-zA-z0-9.]{3,}@[a-zA-Z0-9]{3,}\.[A-Za-z]{2,4}(\.[A-Za-z]{2,4})*)" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please type your email address
+                        </div>
+                    </div>
+                </div>
+                <h2 >Date of birth *</h2>
+                <div class="form-row second_row col-13 mt-4">
+                    <div class="col-3 mb-3">
+                            <label for="validationYear">Year</label>
+                            <input type="number" class="form-control" id="validationYear" name="year" onchange="ageCal()" value="2020" min="1900" max="2020" placeholder="YYYY"  required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                    </div>
+                    <div class="col-3 mb-3">
+                        <label for="validationMonth">Month</label>
+                        <select class="form-control" id="validationMonth" name="month" onchange="ageCal()">
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        </div>
+                    <div class="col-3 mb-3">
+                        <label for="validationDay">Day</label>
+                        <input type="number" class="form-control" id="validationDay"  name="day" value="1" min="1" max="31" onchange="ageCal()" placeholder="DD"  required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-3 mb-3">
+                        <div class="w3-card-2  age_card w3-hover-shadow w3-third mt-3" id="ageCard">
+                            <div class="w3-container w3-center">
+                                <h2 type="text"  id="validationAge" value="dis"></h2>
+                                <input type="checkbox" class="custom-control-input" name="age-conf" onclick="ageVer()" id="customCheck1"  disabled required>
+                                <label class="custom-control-label" for="customCheck1" id="check_label" >Confirm (top left corner)</label>
+                            </div>
+                        </div>
+                        <div id="error-message">
+                            <p id="age-conf">You need to confirm your age !</p>
+                            <p>Submitted form will be invalid !</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>Gender</h2>
+                    <div class="form-row third_row col-13 mt-3">
+                        <div class="col-13 mb-1 third_row">
+                            <div class="btn-group  btn-group-toggle" name="gender" data-toggle="buttons">
+                                <div class="invisible" >for sharp angles</div>
+                                <label class="btn  btn-lg btn-primary active">
+                                    <input type="radio" name="options" id="option1" name="male"  onchange="hideOther()" autocomplete="off" checked> Male
+                                </label>
+                                <label class="btn btn-lg btn-primary">
+                                    <input type="radio" name="options" id="option2" name="female" onchange="hideOther()" autocomplete="off"> Female
+
+                                </label>
+                                <label class="btn  btn-lg btn-primary">
+                                    <input type="radio" name="options" id="option3" name="other" onchange="showOther()" autocomplete="off">Other
+                                </label>
+                                <div class="invisible">for sharp angles</div>
+                            </div>
+                            <div id="Other">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Other</label>
+                                    <textarea class="form-control" name="other-gender" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="line"></div>
+                <h2>Can we be drinking buddies ?</h2>
+                <div class="form-row fourth_row col-12 mt-3">
+                    <label for="select-drink" id="label-select-drink">Select your drink</label>
+                    <select class="custom-select custom-select-lg  mb-4" onchange="drinkChoice()" name=first-select" id="select-drink">
+                        <option value="0" selected>Select your drink</option>
+                        <option value="1">Alcoholic</option>
+                        <option value="2">Non-alcoholic</option>
+                    </select>
+                </div>
+                <div id="choice-alcoholic">
+                <div class="form-row fourth_row col-12 mt-3">
+                    <label for="select-alcoholic" id="label-select-alcoholic">What kind of alcoholic drink ?</label>
+                    <select class="custom-select custom-select-lg  mb-4" name="first-selected-alcoholic" onchange="alcoholicChoice()" id="select-alcoholic">
+                        <option value="0" selected>What kind of alcoholic drink ?</option>
+                        <option value="1">BEER!!</option>
+                        <option value="2">SHOTS!!</option>
+                    </select>
+                </div>
+                </div>
+                <div id="choice-non-alcoholic">
+                <div class="form-row fourth_row col-12 mt-3">
+                    <label for="select-non-alcoholic" id="label-select-non-alcoholic">Why you choose non-alcoholic ?</label>
+                    <select class="custom-select custom-select-lg  mb-4" name="first-selected-non-alcoholic" onchange="nonAlcoholicChoice()" id="select-non-alcoholic">
+                        <option value="0" selected>Why you choose non-alcoholic ?</option>
+                        <option value="1">You are driver</option>
+                        <option value="2">You are abstinent</option>
+                    </select>
+                </div>
+                </div>
+                <div id="choice-beer">
+                <div class="form-row fourth_row col-12 mt-3">
+                    <label for="select-beer" id="label-select-beer"></label>
+                    <select class="custom-select custom-select-lg  mb-4" name="second-selected-beer" id="select-beer">
+                        <option value="0" selected></option>
+                        <option value="1">One beer</option>
+                        <option value="2">Two beers</option>
+                        <option value="3">Three beers or more</option>
+                    </select>
+                </div>
+                </div>
+                <div id="choice-shots">
+                <div class="form-row fourth_row col-12 mt-3">
+                    <label for="select-shots" id="label-select-shots"></label>
+                    <select class="custom-select custom-select-lg  mb-4" name="second-selected-shots" id="select-shots">
+                        <option value="0" selected></option>
+                        <option value="1">One shot</option>
+                        <option value="2">Two shots</option>
+                        <option value="3">Three shots or more</option>
+                    </select>
+                </div>
+                </div>
+                <div id="choice-driver">
+                <div class="form-row fourth_row col-12 mt-3">
+                    <label for="select-home" id="label-select-home">Can you take me home ?</label>
+                    <select class="custom-select custom-select-lg  mb-4" name="second-selected-driver" id="select-home">
+                        <option value="0" selected></option>
+                        <option value="1">YES</option>
+                        <option value="2">no...</option>
+                    </select>
+                </div>
+                </div>
+                <div id="choice-abstinent">
+                <div class="form-row fourth_row col-12 mt-3">
+                    <label for="select-home" id="label-select-abstinent">Why are you an abstinent ?</label>
+                    <select class="custom-select custom-select-lg  mb-4" name="second-selected-abstinent" id="select-abst">
+                        <option value="0" selected></option>
+                        <option value="1">Because of health issues</option>
+                        <option value="2">Because of religion</option>
+                        <option value="2">None of above</option>
+                    </select>
+                </div>
+                </div>
+                <div class="line"></div>
+                <h2>What do you like to do ?</h2>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" name="check-movies" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Watching movies/series
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" name="check-sports" id="defaultCheck2" >
+                    <label class="form-check-label" for="defaultCheck2" >
+                        Sports
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" name="check-books" id="defaultCheck3" >
+                    <label class="form-check-label" for="defaultCheck2" >
+                        Reading books
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" name="check-games" id="defaultCheck4" >
+                    <label class="form-check-label" for="defaultCheck2" >
+                        Playing video games
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" name="check-other" onclick="hideOtherCheck()" id="defaultCheck5" >
+                    <label class="form-check-label" for="defaultCheck2" >
+                        Other
+                    </label>
+                    <div id="other-check">
+                        <label for="exampleFormControlTextarea2">Other</label>
+                        <textarea class="form-control" name="check-other-text" id="exampleFormControlTextarea2" rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div id="btn-area">
+
+                <button class="btn btn-lg btn-primary" type="submit" id="sub-btn">Submit form</button>
+                </div>
+
+
+
+            </form>
+            <footer class="footer"><input value="Martin Smetanka" hidden></footer>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>
